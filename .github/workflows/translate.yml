@@ -45,6 +45,8 @@ jobs:
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
+        env:
+          token: ${{ secrets.GITHUB_TOKEN }}
         with:
           commit-message: 'docs: update documentation translations'
           title: 'Update translations'
