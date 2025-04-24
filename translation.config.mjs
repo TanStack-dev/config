@@ -12,9 +12,7 @@ export default {
 `,
       // 常见技术术语翻译词典
       // 格式: 'English term': '中文翻译'
-      terms: {
-
-      },
+      terms: {},
     },
   },
   docsRoot: 'docs',

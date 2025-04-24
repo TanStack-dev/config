@@ -2,8 +2,8 @@ name: Translate Documentation
 
 on:
   schedule:
-    - cron: '0 20 * * *'  # Daily at 20:00 UTC (within DeepSeek API off-peak pricing window 16:30-00:30 UTC)
-  workflow_dispatch:  # Allow manual triggering
+    - cron: '0 20 * * *' # Daily at 20:00 UTC (within DeepSeek API off-peak pricing window 16:30-00:30 UTC)
+  workflow_dispatch: # Allow manual triggering
 
 jobs:
   check_existing_branch:
