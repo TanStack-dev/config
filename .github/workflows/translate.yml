@@ -18,12 +18,16 @@ jobs:
       - name: Check if docs/update-translations branch already exists
         id: check_branch
         run: |
-          git ls-remote --heads origin docs/update-translations | grep -q docs/update-translations
-          echo "exists=$?" >> $GITHUB_OUTPUT
+          if git ls-remote --heads origin docs/update-translations | grep -q docs/update-translations; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+        shell: bash
 
   translate:
     needs: check_existing_branch
-    if: ${{ needs.check_existing_branch.outputs.branch_exists != '0' }}
+    if: ${{ needs.check_existing_branch.outputs.branch_exists == 'false' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
