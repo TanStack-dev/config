@@ -1,5 +1,5 @@
 ---
-source-updated-at: '2025-04-25T03:58:40.000Z'
+source-updated-at: '2024-07-19T09:06:46.000Z'
 translation-updated-at: '2025-04-25T04:02:06.658Z'
 id: package-structure
 title: 包结构

@@ -1,5 +1,5 @@
 ---
-source-updated-at: '2025-04-25T03:58:40.000Z'
+source-updated-at: '2025-03-04T06:01:52.000Z'
 translation-updated-at: '2025-04-25T04:02:29.505Z'
 id: vite
 title: Vite
