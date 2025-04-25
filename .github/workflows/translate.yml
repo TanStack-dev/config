@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Fetch all history to ensure git log works properly
+          fetch-depth: 0 # Fetch all history to ensure git log works properly
 
       - name: Check if docs/update-translations branch already exists
         id: check_branch
@@ -43,7 +43,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Fetch all history for proper timestamp lookup
+          fetch-depth: 0 # Fetch all history for proper timestamp lookup
 
       - name: Configure git for proper history
         run: |
