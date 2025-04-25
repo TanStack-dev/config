@@ -45,14 +45,6 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for proper timestamp lookup
 
-      - name: Configure git for proper history
-        run: |
-          # Configure Git to ensure we get accurate timestamps
-          git config --global core.quotePath false
-          # Explicitly fetch all history and tags to ensure git log has complete information
-          git fetch --prune --unshallow --tags
-          git log -1 --format=%at  # Test git log command works properly
-
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
