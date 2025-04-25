@@ -11,6 +11,8 @@ types
 dist
 lib
 es
+# we don't need to ignore the docs folder
+!docs/es
 artifacts
 .rpt2_cache
 coverage
