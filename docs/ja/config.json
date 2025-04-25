@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TanStack/tanstack.com/main/tanstack-docs-config.schema.json",
+  "docSearch": {
+    "appId": "",
+    "apiKey": "",
+    "indexName": "tanstack-config"
+  },
+  "sections": [
+    {
+      "label": "はじめに",
+      "children": [
+        {
+          "label": "概要",
+          "to": "overview"
+        }
+      ]
+    },
+    {
+      "label": "ユーティリティ",
+      "children": [
+        {
+          "label": "ESLint (ESLint)",
+          "to": "eslint"
+        },
+        {
+          "label": "公開",
+          "to": "publish"
+        },
+        {
+          "label": "Vite (Vite)",
+          "to": "vite"
+        }
+      ]
+    },
+    {
+      "label": "規約",
+      "children": [
+        {
+          "label": "Nx (Nx)",
+          "to": "nx"
+        },
+        {
+          "label": "パッケージ構造",
+          "to": "package-structure"
+        }
+      ]
+    }
+  ]
+}
