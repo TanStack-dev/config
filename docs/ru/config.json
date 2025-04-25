@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TanStack/tanstack.com/main/tanstack-docs-config.schema.json",
+  "docSearch": {
+    "appId": "",
+    "apiKey": "",
+    "indexName": "tanstack-config"
+  },
+  "sections": [
+    {
+      "label": "Начало работы",
+      "children": [
+        {
+          "label": "Обзор",
+          "to": "overview"
+        }
+      ]
+    },
+    {
+      "label": "Утилиты",
+      "children": [
+        {
+          "label": "ESLint",
+          "to": "eslint"
+        },
+        {
+          "label": "Публикация",
+          "to": "publish"
+        },
+        {
+          "label": "Vite",
+          "to": "vite"
+        }
+      ]
+    },
+    {
+      "label": "Соглашения",
+      "children": [
+        {
+          "label": "Nx",
+          "to": "nx"
+        },
+        {
+          "label": "Структура пакета",
+          "to": "package-structure"
+        }
+      ]
+    }
+  ]
+}
