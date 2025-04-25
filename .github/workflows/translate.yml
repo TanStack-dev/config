@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 20 * * *' # Daily at 20:00 UTC (within DeepSeek API off-peak pricing window 16:30-00:30 UTC)
   workflow_dispatch: # Allow manual triggering
+    inputs:
+      target_language:
+        description: 'Target language code (e.g., zh-hans, es, fr). Leave empty to translate all languages.'
+        required: false
+        type: string
 
 # Add permissions needed for creating PRs
 permissions:
@@ -54,7 +59,14 @@ jobs:
           node-version: '18'
 
       - name: Run translation directly with npx
-        run: npx @tanstack-dev/translate-docs
+        run: |
+          if [[ -n "${{ github.event.inputs.target_language }}" ]]; then
+            echo "Translating for specific language: ${{ github.event.inputs.target_language }}"
+            npx @tanstack-dev/translate-docs -t ${{ github.event.inputs.target_language }}
+          else
+            echo "Translating for all languages"
+            npx @tanstack-dev/translate-docs
+          fi
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
